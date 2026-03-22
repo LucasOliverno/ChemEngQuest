@@ -129,9 +129,11 @@ let currentRoadmap = 'international'; // 'international' | 'consultoria'
 
 function getActivePhases() {
   if (currentRoadmap === 'consultoria') return CONSULTORIA_PHASES;
+  if (currentRoadmap === 'vendas') return VENDAS_PHASES;
   return PHASES;
 }
 function getActiveDetails() {
+  if (currentRoadmap === 'vendas') return VENDAS_TASK_DETAILS;
   return currentRoadmap === 'international' ? TASK_DETAILS : CONSULTORIA_TASK_DETAILS;
 }
 function switchRoadmap(rm) {
@@ -160,6 +162,7 @@ function calcXP() {
   let xp = 0;
   PHASES.forEach(p => p.tasks.forEach(t => { if (state.completed[t.id]) xp += t.xp; }));
   CONSULTORIA_PHASES.forEach(p => p.tasks.forEach(t => { if (state.completed[t.id]) xp += t.xp; }));
+  VENDAS_PHASES.forEach(p => p.tasks.forEach(t => { if (state.completed[t.id]) xp += t.xp; }));
   return xp;
 }
 
@@ -176,7 +179,7 @@ function calcStats() {
   const rank = calcRank(xp);
   let totalCompleted = 0, totalTasks = 0, toolsBuilt = 0, marketTasks = 0;
   const phaseComplete = {};
-  const allPhases = [...PHASES, ...CONSULTORIA_PHASES];
+  const allPhases = [...PHASES, ...CONSULTORIA_PHASES, ...VENDAS_PHASES];
   allPhases.forEach(p => {
     let pDone = 0;
     p.tasks.forEach(t => {
@@ -188,7 +191,10 @@ function calcStats() {
         if (t.type === 'market') marketTasks++;
       }
     });
-    phaseComplete[p.id + '_' + (allPhases.indexOf(p) < PHASES.length ? 'int' : 'con')] = pDone === p.tasks.length;
+    let suffix = 'int';
+    if (CONSULTORIA_PHASES.includes(p)) suffix = 'con';
+    if (VENDAS_PHASES.includes(p)) suffix = 'ven';
+    phaseComplete[p.id + '_' + suffix] = pDone === p.tasks.length;
   });
   // Also track per-roadmap phase completion for achievements
   PHASES.forEach(p => {
@@ -310,6 +316,9 @@ function render() {
     <div class="roadmap-tab ${currentRoadmap === 'consultoria' ? 'active' : ''}" onclick="switchRoadmap('consultoria')">
       🇧🇷 Consultoria BH
     </div>
+    <div class="roadmap-tab ${currentRoadmap === 'vendas' ? 'active' : ''}" onclick="switchRoadmap('vendas')">
+      🗣️ Vendas & Coragem
+    </div>
     <div class="roadmap-tab ${currentRoadmap === 'calendario' ? 'active' : ''}" onclick="switchRoadmap('calendario')">
       📅 Calendário
     </div>
@@ -416,7 +425,9 @@ function renderCalendar() {
               const td = findTaskData(tid);
               if (!td) return '';
               const done = !!state.completed[tid];
-              const src = td.source === 'international' ? '🌍' : '🇧🇷';
+              let src = '🌍';
+              if (td.source === 'consultoria') src = '🇧🇷';
+              if (td.source === 'vendas') src = '🗣️';
               return `<div class="task-item ${done ? 'completed' : ''}" id="task-${tid}">
                 <div class="task-checkbox" onclick="event.stopPropagation(); toggleTask('${tid}', ${td.task.xp})">${done ? '✓' : ''}</div>
                 <div class="task-body" onclick="openTaskDetailCal('${tid}')">
@@ -435,7 +446,7 @@ function renderCalendar() {
 }
 
 function openTaskDetailCal(taskId) {
-  const detail = TASK_DETAILS[taskId] || CONSULTORIA_TASK_DETAILS[taskId];
+  const detail = TASK_DETAILS[taskId] || CONSULTORIA_TASK_DETAILS[taskId] || VENDAS_TASK_DETAILS[taskId];
   if (!detail) return;
   const done = !!state.completed[taskId];
   const td = findTaskData(taskId);

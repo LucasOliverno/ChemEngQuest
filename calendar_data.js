@@ -3,26 +3,26 @@
 const CALENDAR_START = new Date('2026-03-26');
 
 const WEEKLY_SCHEDULE = [
-  { week: 1, tasks: ['t1_1', 'c1_1', 'c1_2'] },
-  { week: 2, tasks: ['t1_1', 'c1_3'] },
-  { week: 3, tasks: ['t1_2', 'c1_3'] },
-  { week: 4, tasks: ['t1_2', 'c1_4'] },
+  { week: 1, tasks: ['t1_1', 'c1_1', 'c1_2', 'v1_1'] },
+  { week: 2, tasks: ['t1_1', 'c1_3', 'v1_2'] },
+  { week: 3, tasks: ['t1_2', 'c1_3', 'v1_3'] },
+  { week: 4, tasks: ['t1_2', 'c1_4', 'v1_4'] },
   { week: 5, tasks: ['c1_5', 'c1_6'] },
   { week: 6, tasks: ['c2_1', 'c2_2'] },
   { week: 7, tasks: ['t1_3', 'c2_3'] },
   { week: 8, tasks: ['t1_3', 'c2_3'] },
-  { week: 9, tasks: ['t1_4', 'c2_4'] },
-  { week: 10, tasks: ['t1_4', 'c2_5'] },
-  { week: 11, tasks: ['t1_5', 'c2_6', 'c3_1'] },
-  { week: 12, tasks: ['t1_6', 'c3_2'] },
+  { week: 9, tasks: ['t1_4', 'c2_4', 'v2_1'] },
+  { week: 10, tasks: ['t1_4', 'c2_5', 'v2_2'] },
+  { week: 11, tasks: ['t1_5', 'c2_6', 'c3_1', 'v2_3'] },
+  { week: 12, tasks: ['t1_6', 'c3_2', 'v2_4'] },
   { week: 13, tasks: ['t1_7', 'c3_3', 'c3_4'] },
   { week: 14, tasks: ['c3_5', 'c3_6', 'c3_7'] },
   { week: 15, tasks: ['t2_1', 'c4_1', 'c4_2'] },
   { week: 16, tasks: ['t2_1', 'c4_3', 'c4_4'] },
-  { week: 17, tasks: ['t2_2', 'c4_5', 'c4_6'] },
-  { week: 18, tasks: ['t2_2', 'c4_7'] },
-  { week: 19, tasks: ['t2_3', 'c5_1'] },
-  { week: 20, tasks: ['t2_3', 'c5_2'] },
+  { week: 17, tasks: ['t2_2', 'c4_5', 'c4_6', 'v3_1'] },
+  { week: 18, tasks: ['t2_2', 'c4_7', 'v3_2'] },
+  { week: 19, tasks: ['t2_3', 'c5_1', 'v3_3'] },
+  { week: 20, tasks: ['t2_3', 'c5_2', 'v3_4'] },
   { week: 21, tasks: ['t2_4', 'c5_3'] },
   { week: 22, tasks: ['t2_4', 'c5_4'] },
   { week: 23, tasks: ['t2_5', 'c5_5'] },
@@ -73,11 +73,13 @@ function getWeekDates(weekNum) {
 }
 
 function getTaskSource(taskId) {
-  return taskId.startsWith('c') ? 'consultoria' : 'international';
+  if (taskId.startsWith('c')) return 'consultoria';
+  if (taskId.startsWith('v')) return 'vendas';
+  return 'international';
 }
 
 function findTaskData(taskId) {
-  const allPhases = [...PHASES, ...CONSULTORIA_PHASES];
+  const allPhases = [...PHASES, ...CONSULTORIA_PHASES, ...VENDAS_PHASES];
   for (const p of allPhases) {
     const t = p.tasks.find(t => t.id === taskId);
     if (t) return { task: t, phase: p, source: getTaskSource(taskId) };
