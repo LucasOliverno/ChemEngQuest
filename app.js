@@ -1,13 +1,13 @@
 // ===== GAME DATA =====
 const RANKS = [
-  { title: 'Estagiário de Campo', emoji: '🔰', xp: 0 },
-  { title: 'Operador Jr.', emoji: '🔧', xp: 500 },
-  { title: 'Engenheiro de Planta', emoji: '⚙️', xp: 1500 },
-  { title: 'Analista de Risco', emoji: '🛡️', xp: 3500 },
-  { title: 'Especialista SIL', emoji: '🎯', xp: 6000 },
-  { title: 'Cientista de Dados', emoji: '📊', xp: 9000 },
-  { title: 'Consultor Sênior', emoji: '🏭', xp: 13000 },
-  { title: 'Diretor Técnico', emoji: '👑', xp: 18000 },
+  { title: 'Estagiário Híbrido', emoji: '🔰', xp: 0 },
+  { title: 'AI Trainer Técnico', emoji: '🛠️', xp: 500 },
+  { title: 'Auditor Energético', emoji: '⚡', xp: 1500 },
+  { title: 'Especialista em Processos', emoji: '⚙️', xp: 3500 },
+  { title: 'Engenheiro de Dados Industriais', emoji: '📊', xp: 6000 },
+  { title: 'Consultor Independente', emoji: '💼', xp: 10000 },
+  { title: 'Especialista em Otimização B2B', emoji: '🏭', xp: 14000 },
+  { title: 'Sócio-Fundador (Firm Owner)', emoji: '👑', xp: 18000 },
 ];
 
 const PHASES = [
@@ -102,7 +102,7 @@ const ACHIEVEMENTS = [
   { id: 'a_streak7', name: 'Semana Perfeita', desc: 'Streak de 7 dias', emoji: '📅', check: s => s.streak >= 7 },
   { id: 'a_streak30', name: 'Mês de Ferro', desc: 'Streak de 30 dias', emoji: '🗓️', check: s => s.streak >= 30 },
   { id: 'a_halfxp', name: 'Meio Caminho', desc: 'Acumule 9.000 XP', emoji: '⚡', check: s => s.xp >= 9000 },
-  { id: 'a_allcomplete', name: 'Diretor Técnico', desc: 'Complete TODAS as tarefas', emoji: '👑', check: s => s.totalCompleted >= 42 },
+  { id: 'a_allcomplete', name: 'Sócio-Fundador', desc: 'Complete TODAS as tarefas', emoji: '👑', check: s => s.totalCompleted >= 42 },
 ];
 
 const QUOTES = [

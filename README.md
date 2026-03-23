@@ -137,8 +137,8 @@ Marcos reais da minha jornada — cada um é uma prova de progresso:
 ## 📊 Meu Progresso
 
 ```
-Rank Atual:  🔰 Estagiário de Campo
-XP Total:    0 / 500 (próximo rank: 🔧 Operador Jr.)
+Rank Atual:  🔰 Estagiário Híbrido
+XP Total:    0 / 500 (próximo rank: 🛠️ AI Trainer Técnico)
 Streak:      0 dias 🔥
 Fase Atual:  1 — Hidráulica Industrial
 
@@ -171,7 +171,7 @@ Ou, se eu construir o app web: abra no navegador, clique nos checkboxes, e veja 
 ## 🎯 Meta Final
 
 ```
-👑 Diretor Técnico — 18.000 XP
+👑 Sócio-Fundador (Firm Owner) — 18.000 XP
 
 Significa que eu:
 ✅ Domino hidráulica, balanços, segurança e dados industriais
