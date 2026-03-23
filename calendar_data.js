@@ -3,7 +3,7 @@
 const CALENDAR_START = new Date('2026-03-26');
 
 const WEEKLY_SCHEDULE = [
-  { week: 1, tasks: ['t1_1', 'c1_1', 'c1_2', 'v1_1'] },
+  { week: 1, tasks: ['t1_1', 't1_8', 'c1_1', 'c1_2', 'v1_1'] },
   { week: 2, tasks: ['t1_1', 'c1_3', 'v1_2'] },
   { week: 3, tasks: ['t1_2', 'c1_3', 'v1_3'] },
   { week: 4, tasks: ['t1_2', 'c1_4', 'v1_4'] },

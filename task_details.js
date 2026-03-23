@@ -104,6 +104,20 @@ const TASK_DETAILS = {
     resources: 'Upwork, Kolabtree, Workana, Freelancer.com',
     criteria: 'Pelo menos 3 propostas enviadas em plataformas diferentes. Não precisa ganhar o job — o objetivo é ENVIAR.',
   },
+  t1_8: {
+    title: '🤖 Ponte Financeira: Scale AI / Outlier AI',
+    what: 'Estabelecer a primeira fonte de renda em dólar para substituir sua bolsa de estágio com rapidez.',
+    todo: [
+      'Atualizar LinkedIn destacando conhecimento em Engenharia (Cálculo, Termodinâmica, Python)',
+      'Criar Currículo (CV) em inglês focado em STEM (descartar a linguagem de estagiário genérico)',
+      'Cadastrar na Outlier AI focado em projetos STEM / Math / Chemistry Expert',
+      'Cadastrar na DataAnnotation Tech',
+      'Passar nos testes admissionais provando fluência em inglês e rigor técnico',
+      'Regra inquebrável: Não usar ChatGPT ou Claude para responder as avaliações (eles banem na hora)'
+    ],
+    resources: 'Guia: plano_outlier_ai.md e prompt_posicionamento_linkedin.md',
+    criteria: 'Aprovação recebida (onboarding concluído) e pagamento do primeiro task sacado.',
+  },
   t2_1: {
     title: '📖 Fundamentos de Balanço de Massa e Energia',
     what: 'Dominar os princípios de conservação aplicados a sistemas industriais.',
