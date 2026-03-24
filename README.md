@@ -32,7 +32,6 @@ Cada fase tem **3 pilares** para completar: Estudo, Projeto Prático e Ferrament
 | 1.5 | Cenário: Resolver o caso da bomba petroquímica com -20% vazão | 🌋 Cenário | 100 | ⬜ |
 | 1.6 | Entregável: Relatório + Calculadora + Matriz de Seleção de Bomba | 📄 Entrega | 150 | ⬜ |
 | 1.7 | Mercado: Enviar primeira proposta no Upwork (pump sizing) | 💼 Freela | 200 | ⬜ |
-| 1.8 | Ponte Financeira: Aplicação Scale AI / Outlier AI como Domain Expert | 💼 Freela | 300 | ⬜ |
 
 ### Fase 2 — Balanços de Massa & Energia (Meses 3-4)
 | # | Tarefa | Tipo | XP | Status |

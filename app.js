@@ -20,8 +20,7 @@ const PHASES = [
       { id: 't1_4', name: 'Vibe Coding: Calculadora Interativa de Pump System', type: 'tool', xp: 250 },
       { id: 't1_5', name: 'Cenário: Bomba petroquímica com -20% vazão', type: 'scenario', xp: 100 },
       { id: 't1_6', name: 'Entregável: Relatório + Calculadora + Matriz de Seleção', type: 'deliverable', xp: 150 },
-      { id: 't1_7', name: 'Mercado: Enviar primeira proposta no Upwork', type: 'market', xp: 200 },
-      { id: 't1_8', name: 'Ponte Financeira: Aplicação Scale AI / Outlier AI', type: 'market', xp: 300 },
+      { id: 't1_7', name: 'Mercado: Enviar primeira proposta no Upwork', type: 'market', xp: 200 }
     ]
   },
   {

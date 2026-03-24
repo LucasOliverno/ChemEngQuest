@@ -1,6 +1,5 @@
 # 🗣️ Prompt: Mestre do Posicionamento (LinkedIn, CV e Upwork)
 
-Para atrair as plataformas de IA (Outlier/Scale) **e** começar a construir sua autoridade para a consultoria PME, você não pode parecer um "estagiário recém-formado desesperado por emprego". Você precisa soar como um **Engenheiro de Processos Analítico e Especialista de Dados em Início de Carreira**.
 
 Copie o mega-prompt abaixo e cole no ChatGPT ou Claude (de preferência o Claude 3.5 Sonnet, que escreve melhor). 
 
@@ -18,7 +17,6 @@ Também ensino a mim mesmo Data Analysis e programação em Python (pandas, rela
 Tenho inglês fluente.
 
 **MEUS DOIS OBJETIVOS PROFISSIONAIS IMEDIATOS:**
-1. **Curto prazo (Ponte Financeira):** Ser aprovado em plataformas como Outlier AI, Scale AI e DataAnnotation como "STEM/Engineering Expert" ou "AI Trainer". Eles buscam especialistas rigorosos que saibam avaliar respostas matemáticas e físicas geradas por IA.
 2. **Médio prazo (Negócio Principal):** Posicionar-me como consultor de Eficiência Energética e Otimização de Processos (focado em indústrias de médio porte, como cervejarias e usinas), usando análise de dados para reduzir custos operacionais.
 
 **O QUE VOCÊ DEVE GERAR PARA MIM:**
@@ -44,5 +42,4 @@ Escreva uma descrição matadora para o meu perfil no Upwork (em Inglês). O obj
 ## 🎯 Por que esse Prompt funciona?
 
 1. **Evita a "Maldição do Júnior":** Ele proíbe a IA de usar termos que te diminuem ("recent grad", "entry-level", "looking for an opportunity"). Você é um especialista técnico solucionador de problemas matemáticos. Ponto.
-2. **Bifurcação Inteligente:** O prompt gera o pacote em inglês perfeito para os algoritmos de recrutamento invisível da *Outlier* (cheio de palavras-chave STEM), enquanto constrói sua persona B2B em português para quando você começar as prospecções locais das cervejarias em BH e região.
 3. **Foco no Resultado:** Ao forçar a linguagem de "ROI" e "Economia de custos", sua bio de Upwork já soa como consultor sênior, atraindo os clientes certos.

@@ -76,7 +76,6 @@ Resultado: NÃO consegue sair da CLT até final de 2027. Precisa manter emprego 
 Cenário Realista (50% de chance)
 Período	Receita Mensal	Fonte
 Mar-Jun 2026	R$ 0	Setup + ferramentas
-Jul-Ago 2026	R$ 500-1.500	Upwork/Outlier AI + 1 diagnóstico gratuito feito
 Set-Dez 2026	R$ 2.000-5.000	1-2 projetos pagos + micro-freelance
 Jan-Jun 2027	R$ 5.000-8.000	2-3 clientes, 1 recorrência
 Jul-Dez 2027	R$ 8.000-12.000	3-4 clientes, recorrência crescendo
@@ -85,7 +84,6 @@ Resultado: Pode sair da CLT entre Jul-Dez 2027, com receita equivalente a salár
 
 Cenário Otimista (20% de chance)
 Período	Receita Mensal	Fonte
-Mar-Jun 2026	R$ 0-500	Setup rápido, Outlier AI
 Jul-Set 2026	R$ 3.000-5.000	1 projeto de usina + Upwork
 Out-Dez 2026	R$ 5.000-10.000	2-3 projetos + recorrência
 2027	R$ 10.000-20.000	Múltiplos clientes, Toptal ou direto
@@ -112,7 +110,6 @@ Esta semana: Ligue para 3 cervejarias e pergunte sobre custo de energia
 Se nenhum cervejeiro se importar, mude de nicho AGORA (laticínios, padarias)
 Não gaste 2 meses no dashboard sem ter falado com 1 prospect
 3. Comece a Gerar Receita IMEDIATA (Ponte Financeira)
-Outlier AI / Scale AI: R$ 2.000-4.000/mês como AI trainer (começa esta semana)
 Isso financia o período de construção sem precisar tocar poupança
 4. VoxFinance: Decisão Binária
 Ou dá 30 dias finais de tentativa séria (marketing pago, cold outreach)

@@ -104,20 +104,6 @@ const TASK_DETAILS = {
     resources: 'Upwork, Kolabtree, Workana, Freelancer.com',
     criteria: 'Pelo menos 3 propostas enviadas em plataformas diferentes. Não precisa ganhar o job — o objetivo é ENVIAR.',
   },
-  t1_8: {
-    title: '🤖 Ponte Financeira: Scale AI / Outlier AI',
-    what: 'Estabelecer a primeira fonte de renda em dólar para substituir sua bolsa de estágio com rapidez.',
-    todo: [
-      'Atualizar LinkedIn destacando conhecimento em Engenharia (Cálculo, Termodinâmica, Python)',
-      'Criar Currículo (CV) em inglês focado em STEM (descartar a linguagem de estagiário genérico)',
-      'Cadastrar na Outlier AI focado em projetos STEM / Math / Chemistry Expert',
-      'Cadastrar na DataAnnotation Tech',
-      'Passar nos testes admissionais provando fluência em inglês e rigor técnico',
-      'Regra inquebrável: Não usar ChatGPT ou Claude para responder as avaliações (eles banem na hora)'
-    ],
-    resources: 'Guia: plano_outlier_ai.md e prompt_posicionamento_linkedin.md',
-    criteria: 'Aprovação recebida (onboarding concluído) e pagamento do primeiro task sacado.',
-  },
   t2_1: {
     title: '📖 Fundamentos de Balanço de Massa e Energia',
     what: 'Dominar os princípios de conservação aplicados a sistemas industriais.',
@@ -217,10 +203,9 @@ const TASK_DETAILS = {
       'Jobs-alvo: "Mass and energy balance for chemical process" ($200-$800)',
       'Jobs-alvo: "Excel spreadsheet for engineering calculations" ($30-$150)',
       'Usar suas ferramentas como demonstração viva nas propostas',
-      'Registrar no Scale AI / Outlier AI como avaliador técnico ($15-$25/hr) como renda imediata',
       'ENTREGAR o projeto com qualidade, pedir review escrita do cliente',
     ],
-    resources: 'Upwork, Kolabtree, Workana, Scale AI, Outlier AI',
+    resources: 'Upwork, Kolabtree, Workana',
     criteria: 'Pelo menos 1 projeto pago CONCLUÍDO com payment received. Qualquer valor conta.',
   },
   t3_1: {
@@ -340,7 +325,7 @@ const TASK_DETAILS = {
   t5_4: { title: '🤖 Dashboard de Monitoramento de Planta', what: 'Dashboard interativo para análise de dados de processo.', todo: ['Upload de dados CSV de historian export', 'Auto-cálculo de KPIs: eficiência, rendimento, tendências de consumo', 'Timeline de anomalias: flags com severidade e timestamp', 'Explorador de correlação: IA identifica variáveis correlacionadas com KPI selecionado', 'Interpretação em linguagem natural: IA escreve resumo do estado da planta', 'Comparação de benchmark: esta semana vs. melhor semana registrada', 'Geração de relatório: one-click weekly performance report'], resources: 'Python/Streamlit, plotly, Claude API', criteria: 'Dashboard que aceite CSV e gere análise automatizada com visualizações.' },
   t5_5: { title: '🌋 Cenário: Early Warning de Compressor', what: 'Planta de gás com shutdowns recorrentes custando $150k-$300k cada. 12 meses de dados disponíveis.', todo: ['Construir modelo usando vibração, temperatura, pressão sucção/descarga e potência', 'Identificar padrão precursor: aumento lento de temperatura + mudança de tendência de vibração 2-5 dias antes', 'Resultado: early warning 3-7 dias antes de falha prevista', 'Demonstrar valor: mesmo 1 shutdown evitado paga meses de consultoria'], resources: 'Datasets públicos de manutenção preditiva', criteria: 'Modelo que detecte degradação com antecedência de pelo menos 48h.' },
   t5_6: { title: '📄 Entregável da Fase 5', what: 'Portfólio de data analytics.', todo: ['Anomaly Detection Demo com documentação', 'Plant Performance Dashboard funcional', 'Process Data Analysis Report', 'Alarm Rationalization Template', 'Predictive Maintenance Case Study end-to-end'], resources: 'Formatar profissionalmente.', criteria: 'Todos os 5 itens no portfólio.' },
-  t5_7: { title: '💼 2 Projetos de Análise de Dados', what: 'Completar projetos pagos de data analytics.', todo: ['Upwork: "Analyze plant historian data and identify inefficiencies" ($400-$2,000)', 'Upwork: "Build Python dashboard for process monitoring" ($300-$1,500)', 'Kolabtree: "Data scientist with process background for industrial IoT" ($75-$150/hr)', 'LinkedIn: contatar Digital Transformation Leads', 'Outlier AI / Scale AI: data labeling industrial ($20-$45/hr)', 'Completar e ENTREGAR 2 projetos com payment received'], resources: 'Upwork, Kolabtree, Scale AI', criteria: '2 projetos pagos concluídos com reviews positivas.' },
+  t5_7: { title: '💼 2 Projetos de Análise de Dados', what: 'Completar projetos pagos de data analytics.', todo: ['Upwork: "Analyze plant historian data and identify inefficiencies" ($400-$2,000)', 'Upwork: "Build Python dashboard for process monitoring" ($300-$1,500)', 'Kolabtree: "Data scientist with process background for industrial IoT" ($75-$150/hr)', 'LinkedIn: contatar Digital Transformation Leads', 'Completar e ENTREGAR 2 projetos com payment received'], resources: 'Upwork, Kolabtree', criteria: '2 projetos pagos concluídos com reviews positivas.' },
   t6_1: { title: '📖 Integração e Troubleshooting Avançado', what: 'Competências avançadas de consultoria técnica.', todo: ['Metodologia sistemática de troubleshooting de processo', 'Protocolos de avaliação de condição de equipamento', 'Otimização sob restrições operacionais', 'Frameworks de priorização multi-hazard', 'Avaliação de qualidade de procedimentos operacionais', 'Avaliação de processo de MOC', 'Indicadores de cultura de process safety', 'Otimização de turnaround e inspeção', 'Gap analysis regulatório (PSM, SEVESO, ISO)', 'Análise de lifecycle cost de equipamentos'], resources: 'CCPS Guidelines, API inspection codes, ISO 45001', criteria: 'Capacidade de conduzir troubleshooting sistemático em cenário dado.' },
   t6_2: { title: '📖 Business & Consulting Skills', what: 'Habilidades de negócio para consultoria independente.', todo: ['Estruturar engajamento: escopo, entregáveis, fees', 'Escrever propostas técnicas e Statement of Work (SoW)', 'Client relationship management', 'Retainer vs. project-based pricing', 'Considerações fiscais e legais internacionais', 'Construção de marca técnica: LinkedIn, escrita, speaking', 'Pricing de serviços de engenharia internacionalmente', 'Gestão de scope creep e expectativas'], resources: 'Consulting Success (livro), Million Dollar Consulting (Alan Weiss)', criteria: 'Conseguir escrever SoW e proposta completas para um engajamento hipotético.' },
   t6_3: { title: '🔧 Capstone: Review Integrado para Planta Química', what: 'Projeto final — pacote completo de consultoria para planta real/hipotética preparando para auditoria regulatória.', todo: ['Process Engineering Review: hidráulica, balanços, condição de equipamentos', 'Safety Risk Screening: gaps HAZOP, requisitos LOPA, status SIL/SIF', 'Data Analysis: tendência de KPIs 6 meses com resumo de anomalias', 'Recommendations Register: plano de ação priorizado com custos e projeções', 'Executive Summary: resumo de 2 páginas para C-suite com business case'], resources: 'Usar TODAS as ferramentas construídas ao longo do roadmap', criteria: 'Relatório de 40+ páginas — flagship portfolio piece.' },

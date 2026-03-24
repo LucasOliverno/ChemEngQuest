@@ -30,7 +30,6 @@ Gatilho para ativar: Se após 30 abordagens locais (Fase 4, ~Semana 17) a taxa d
 Não depender de consultoria para comer nos primeiros meses:
 
 Fonte	Receita Estimada	Quando Começa	Esforço
-Outlier AI / Scale AI (AI Trainer técnico)	R$ 2.000-5.000/mês	Esta semana	2-3h/dia
 Workana (dashboards Python/Excel)	R$ 500-2.000/mês	Semana 2	Projetos avulsos
 Upwork (engineering calculations)	$50-$300/projeto	Semana 4	3-5 propostas/semana
 99Freelas (automação de planilhas)	R$ 300-1.500/mês	Semana 2	Projetos rápidos
@@ -38,7 +37,6 @@ Meta: R$ 2.000-4.000/mês de receita-ponte até a consultoria começar a gerar.
 
 IMPORTANT
 
-Outlier AI paga em dólar e aceita engenheiros como avaliadores de respostas técnicas de IA. É a receita mais rápida e segura que existe para seu perfil. Cadastre-se antes da Semana 1 começar.
 
 🔄 Salvaguarda #3 — Nichos de Backup (Pivot Sem Dor)
 Todos usam a mesma lógica (análise térmica/energética), então o dashboard precisa de ajustes mínimos:
@@ -205,7 +203,6 @@ Regra 2-1-1: 2 tarefas do roadmap, 1 de mercado, 1 de descanso por semana
 Não medir sucesso por conversão, mas por ATIVIDADE: "enviei 10 emails" é sucesso, independente da resposta
 Celebrar micro-vitórias: o app ChemEngQuest existe exatamente para isso — USE-O
 Parte 3: Timeline Integrada com Salvaguardas
-2026 MAR  ██ Setup: MEI, conta PJ, Outlier AI, primeiros estudos
      ABR  ██ Dashboard v1, mapeamento de prospects, perfil Upwork
      MAI  ██ Cold outreach começa, 3 professores UFMG, diagnósticos gratuitos
      JUN  ██ ⚡ DECISÃO: nicho está funcionando? Se não → pivot
@@ -246,7 +243,6 @@ Status: Full-time consultor há 12+ meses
 Resumo Executivo: As 8 Salvaguardas
 #	Salvaguarda	Quando Ativa
 1	Remoto-first → mercado 20x maior	Se BH não converter em 8 semanas
-2	Receita-ponte (Outlier AI) → R$ 2-5k/mês imediato	Desde o dia 1
 3	Nichos backup → laticínios, padarias, frigoríficos	Se cervejarias não engajarem
 4	Kill switches → gatilhos de decisão objetivos	A cada marco do plano
 5	Plano B nuclear → CLT premium com skills 10x	Se tudo falhar em 12 meses
