@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🧪 ChemQuest — Minha Jornada Gamificada</title>
-  <meta name="description" content="Roadmap pessoal de 12 meses: Engenheiro Químico → Consultor Industrial">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧪</text></svg>">
+  <title>ChemQuest — Protocolo de Consultoria Industrial</title>
+  <meta name="description" content="Engenheiro Químico → Consultor Industrial">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%2310b981'/></svg>">
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
 
+  <!-- Confetti Canvas overlay -->
   <canvas id="confetti-canvas"></canvas>
 
   <div class="xp-popup" id="xp-popup">
@@ -19,93 +21,97 @@
 
   <div class="rank-up-overlay" id="rank-up-overlay">
     <div class="rank-up-content">
-      <div class="rank-emoji">🔧</div>
+      <div class="rank-emoji"><i class="ph ph-shield-check"></i></div>
       <h2>Novo Rank!</h2>
       <p>Desbloqueado!</p>
-      <button class="dismiss">CONTINUAR →</button>
+      <button class="dismiss">Continuar <i class="ph ph-arrow-right"></i></button>
     </div>
   </div>
 
   <div class="app">
+    <!-- Asymmetric Layout: Left sidebar (Header + Stats) -->
+    <div class="sidebar-content">
+      <header class="header">
+        <h1>CHEMQUEST<span>.</span></h1>
+        <p class="subtitle">Skill Tree Protocol for Industrial Consulting Integration</p>
+      </header>
 
-    <header class="header">
-      <h1>CHEMQUEST</h1>
-      <p class="subtitle">Engenheiro Químico → Consultor Industrial AI-Powered</p>
-    </header>
+      <div class="stats-bar">
+        <div class="stat-card rank-card">
+          <div class="stat-label">Nível</div>
+          <div class="stat-value" id="stat-rank">Initiate</div>
+        </div>
+        <div class="stat-card xp-card">
+          <div class="stat-label">XP Total</div>
+          <div class="stat-value" id="stat-xp">0</div>
+        </div>
+        <div class="stat-card streak-card">
+          <div class="stat-label">Sequência</div>
+          <div class="stat-value" id="stat-streak">0</div>
+        </div>
+        <div class="stat-card tasks-card">
+          <div class="stat-label">Tarefas</div>
+          <div class="stat-value" id="stat-tasks">0/0</div>
+          <div class="stat-detail" id="stat-tasks-detail">0% completo</div>
+        </div>
+      </div>
 
-    <div class="stats-bar">
-      <div class="stat-card rank-card">
-        <div class="stat-label">Nível</div>
-        <div class="stat-value" id="stat-rank">🔰 Estagiário</div>
-      </div>
-      <div class="stat-card xp-card">
-        <div class="stat-label">XP Total</div>
-        <div class="stat-value" id="stat-xp">0</div>
-      </div>
-      <div class="stat-card streak-card">
-        <div class="stat-label">Sequência</div>
-        <div class="stat-value" id="stat-streak">0 🔥</div>
-      </div>
-      <div class="stat-card tasks-card">
-        <div class="stat-label">Tarefas</div>
-        <div class="stat-value" id="stat-tasks">0/42</div>
-        <div class="stat-detail" id="stat-tasks-detail">0% completo</div>
+      <section class="achievements-section">
+        <h2>Conquistas</h2>
+        <div class="achievements-grid" id="achievements-grid"></div>
+      </section>
+      
+      <div class="daily-quote">
+        <i class="ph ph-lightning"></i>
+        <span id="daily-quote-text"></span>
       </div>
     </div>
 
-    <section class="xp-section">
-      <div class="xp-rank-labels">
-        <span class="current-rank" id="current-rank-label">🔰 Estagiário de Campo</span>
-        <span class="xp-numbers" id="xp-numbers">0 / 500 XP</span>
-        <span class="next-rank" id="next-rank-label">Próximo: 🔧 Operador Jr.</span>
-      </div>
-      <div class="xp-bar-container">
-        <div class="xp-bar-fill" id="xp-bar-fill" style="width: 0%"></div>
-      </div>
-    </section>
+    <!-- Right column (Main workflow) -->
+    <div class="main-content">
+      <section class="xp-section">
+        <div class="xp-rank-labels">
+          <span class="current-rank" id="current-rank-label">Level 1</span>
+          <span class="xp-numbers" id="xp-numbers">0 / 500</span>
+          <span class="next-rank" id="next-rank-label">Próximo...</span>
+        </div>
+        <div class="xp-bar-container">
+          <div class="xp-bar-fill" id="xp-bar-fill" style="width: 0%"></div>
+        </div>
+      </section>
 
-    <div class="weekly-habits-section" id="weekly-habits"></div>
+      <div class="weekly-habits-section" id="weekly-habits"></div>
 
-    <div class="roadmap-tabs" id="roadmap-tabs"></div>
+      <div class="roadmap-tabs" id="roadmap-tabs"></div>
 
-    <div class="phase-tabs" id="phase-tabs"></div>
+      <div class="phase-tabs" id="phase-tabs"></div>
 
-    <div class="phase-content" id="phase-content"></div>
-
-    <section class="achievements-section">
-      <h2>🏆 CONQUISTAS</h2>
-      <div class="achievements-grid" id="achievements-grid"></div>
-    </section>
-
-    <div class="daily-quote">
-      <span class="quote-icon">💡</span>
-      <span id="daily-quote-text"></span>
+      <div class="phase-content" id="phase-content"></div>
     </div>
-
   </div>
 
   <div class="task-detail-modal" id="task-detail-modal">
     <div class="detail-panel">
-      <button class="detail-close" onclick="closeDetail()">✕</button>
+      <button class="detail-close" onclick="closeDetail()"><i class="ph ph-x"></i></button>
       <h2 class="detail-title"></h2>
       <div class="detail-xp-badge"><span class="detail-xp-value">+50 XP</span></div>
       <div class="detail-section">
-        <h3>📋 O que é</h3>
+        <h3><i class="ph ph-file-text"></i> O que é</h3>
         <p class="detail-what"></p>
       </div>
       <div class="detail-section">
-        <h3>✅ O que preciso fazer</h3>
+        <h3><i class="ph ph-list-checks"></i> O que fazer</h3>
         <ul class="detail-todo"></ul>
       </div>
       <div class="detail-section">
-        <h3>📚 Recursos & Referências</h3>
+        <h3><i class="ph ph-books"></i> Recursos & Referências</h3>
         <p class="detail-resources"></p>
       </div>
       <div class="detail-section">
-        <h3>🎯 Critério de Conclusão</h3>
+        <h3><i class="ph ph-target"></i> Critério de Sucesso</h3>
         <p class="detail-criteria"></p>
       </div>
-      <button class="detail-complete-btn">✓ Marcar como Concluída</button>
+      <button class="detail-complete-btn">CONCLUIR <i class="ph ph-check"></i></button>
     </div>
   </div>
 

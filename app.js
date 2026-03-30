@@ -1,18 +1,18 @@
 // ===== GAME DATA =====
 const RANKS = [
-  { title: 'Estagiário de Engenharia', emoji: '🔰', xp: 0 },
-  { title: 'Técnico de Processos', emoji: '🛠️', xp: 400 },
-  { title: 'Auditor Energético', emoji: '⚡', xp: 1200 },
-  { title: 'Especialista em Processos', emoji: '⚙️', xp: 2800 },
-  { title: 'Engenheiro de Dados Industriais', emoji: '📊', xp: 5000 },
-  { title: 'Consultor Independente', emoji: '💼', xp: 7500 },
-  { title: 'Especialista em Otimização Industrial', emoji: '🏭', xp: 10000 },
-  { title: 'Sócio-Fundador', emoji: '👑', xp: 13000 },
+  { title: 'Estagiário de Engenharia', icon: '<i class="ph ph-shield-check"></i>', xp: 0 },
+  { title: 'Técnico de Processos', icon: '<i class="ph ph-wrench"></i>', xp: 400 },
+  { title: 'Auditor Energético', icon: '<i class="ph ph-lightning"></i>', xp: 1200 },
+  { title: 'Especialista em Processos', icon: '<i class="ph ph-gear"></i>', xp: 2800 },
+  { title: 'Engenheiro de Dados', icon: '<i class="ph ph-chart-bar"></i>', xp: 5000 },
+  { title: 'Consultor Independente', icon: '<i class="ph ph-briefcase"></i>', xp: 7500 },
+  { title: 'Especialista Industrial', icon: '<i class="ph ph-factory"></i>', xp: 10000 },
+  { title: 'Sócio-Fundador', icon: '<i class="ph ph-crown"></i>', xp: 13000 },
 ];
 
 const PHASES = [
   {
-    id: 1, name: 'Hidráulica Industrial', months: 'Meses 1-2', icon: '⚙️', color: '#3b82f6',
+    id: 1, name: 'Hidráulica Industrial', months: 'Meses 1-2', icon: '<i class="ph ph-drop"></i>', color: '#10b981',
     tasks: [
       { id: 't1_1', name: 'Estudar: Bernoulli, Darcy-Weisbach, NPSH, curvas de bomba', type: 'study', xp: 50 },
       { id: 't1_2', name: 'Estudar: API 610, P&ID, PFD, modos de falha', type: 'study', xp: 50 },
@@ -23,7 +23,7 @@ const PHASES = [
     ]
   },
   {
-    id: 2, name: 'Balanços de Massa & Energia', months: 'Meses 3-4', icon: '🔥', color: '#f59e0b',
+    id: 2, name: 'Balanços de Massa & Energia', months: 'Meses 3-4', icon: '<i class="ph ph-fire"></i>', color: '#10b981',
     tasks: [
       { id: 't2_1', name: 'Estudar: Conservação, grau de liberdade, reciclo, purga', type: 'study', xp: 50 },
       { id: 't2_2', name: 'Estudar: KPIs, pinch analysis, SPC, benchmarking', type: 'study', xp: 50 },
@@ -34,10 +34,10 @@ const PHASES = [
     ]
   },
   {
-    id: 3, name: 'HAZOP & Triagem de Risco', months: 'Meses 5-6', icon: '🛡️', color: '#ef4444',
+    id: 3, name: 'HAZOP & Triagem de Risco', months: 'Meses 5-6', icon: '<i class="ph ph-warning"></i>', color: '#10b981',
     tasks: [
       { id: 't3_1', name: 'Estudar: HAZOP, guide words, causa-consequência-salvaguarda', type: 'study', xp: 50 },
-      { id: 't3_2', name: 'Estudar: CCPS risk matrix, LOPA intro, ISD, PSM/SEVESO', type: 'study', xp: 50 },
+      { id: 't3_2', name: 'Estudar: CCPS risk matrix, LOPA intro, ISD, PSM', type: 'study', xp: 50 },
       { id: 't3_3', name: 'Projeto: Estudo HAZOP — Alimentação de Reator (3 nós)', type: 'project', xp: 200 },
       { id: 't3_4', name: 'Vibe Coding: Gerador de Planilha HAZOP + Screener', type: 'tool', xp: 250 },
       { id: 't3_5', name: 'Cenário: PSSR de unidade de recuperação de solvente', type: 'scenario', xp: 100 },
@@ -45,21 +45,21 @@ const PHASES = [
     ]
   },
   {
-    id: 4, name: 'LOPA, SIL & Incidentes', months: 'Meses 7-8', icon: '🎯', color: '#8b5cf6',
+    id: 4, name: 'LOPA, SIL & Incidentes', months: 'Meses 7-8', icon: '<i class="ph ph-target"></i>', color: '#10b981',
     tasks: [
       { id: 't4_1', name: 'Estudar: LOPA, IPLs, RRF, SIL, IEC 61511', type: 'study', xp: 50 },
-      { id: 't4_2', name: 'Estudar: 5-Why, Bow-Tie, MOC, alarmes, BPCS vs SIS', type: 'study', xp: 50 },
-      { id: 't4_3', name: 'Projeto: LOPA cenário alto risco + Investigação incidente', type: 'project', xp: 200 },
+      { id: 't4_2', name: 'Estudar: 5-Why, Bow-Tie, MOC, alarmes', type: 'study', xp: 50 },
+      { id: 't4_3', name: 'Projeto: LOPA cenário alto risco + Investigação', type: 'project', xp: 200 },
       { id: 't4_4', name: 'Vibe Coding: Calculadora LOPA + Banco de Lições', type: 'tool', xp: 250 },
       { id: 't4_5', name: 'Cenário: SIL assessment — tanque atmosférico', type: 'scenario', xp: 100 },
       { id: 't4_6', name: 'Entregável: Relatório LOPA + Template Investigação', type: 'deliverable', xp: 150 }
     ]
   },
   {
-    id: 5, name: 'Dados & Detecção de Anomalias', months: 'Meses 9-10', icon: '📊', color: '#10b981',
+    id: 5, name: 'Dados & Detecção de Anomalias', months: 'Meses 9-10', icon: '<i class="ph ph-chart-line"></i>', color: '#10b981',
     tasks: [
       { id: 't5_1', name: 'Estudar: Séries temporais, SPC, outliers, PCA', type: 'study', xp: 50 },
-      { id: 't5_2', name: 'Estudar: Regressão, isolation forest, feature eng., digital twin', type: 'study', xp: 50 },
+      { id: 't5_2', name: 'Estudar: Regressão, isolation forest, digital twin', type: 'study', xp: 50 },
       { id: 't5_3', name: 'Projeto: Sistema Detecção Anomalias (Tennessee Eastman)', type: 'project', xp: 200 },
       { id: 't5_4', name: 'Vibe Coding: Dashboard de Monitoramento de Planta', type: 'tool', xp: 250 },
       { id: 't5_5', name: 'Cenário: Early warning degradação de compressor', type: 'scenario', xp: 100 },
@@ -67,78 +67,77 @@ const PHASES = [
     ]
   },
   {
-    id: 6, name: 'Integração & Lançamento', months: 'Meses 11-12', icon: '🏭', color: '#f43f5e',
+    id: 6, name: 'Integração & Lançamento', months: 'Meses 11-12', icon: '<i class="ph ph-rocket"></i>', color: '#10b981',
     tasks: [
-      { id: 't6_1', name: 'Estudar: Troubleshooting, MOC, compliance, lifecycle cost', type: 'study', xp: 50 },
+      { id: 't6_1', name: 'Estudar: Troubleshooting, compliance, lifecycle cost', type: 'study', xp: 50 },
       { id: 't6_2', name: 'Estudar: Proposta, SoW, pricing, branding, LinkedIn', type: 'study', xp: 50 },
-      { id: 't6_3', name: 'Capstone: Review integrado para planta química', type: 'project', xp: 300 },
+      { id: 't6_3', name: 'Capstone: Review integrado para planta', type: 'project', xp: 300 },
       { id: 't6_4', name: 'Vibe Coding: Plataforma Integrada de Consultoria', type: 'tool', xp: 300 },
-      { id: 't6_5', name: 'Cenário: Engajamento completo — pharma 200 funcionários', type: 'scenario', xp: 150 },
+      { id: 't6_5', name: 'Cenário: Engajamento completo — pharma', type: 'scenario', xp: 150 },
       { id: 't6_6', name: 'Entregável: Pacote completo de consultoria', type: 'deliverable', xp: 200 }
     ]
   }
 ];
 
 const ACHIEVEMENTS = [
-  { id: 'a_first_task', name: 'Primeiro Passo', desc: 'Complete sua primeira tarefa', emoji: '🌱', check: s => s.totalCompleted >= 1 },
-  { id: 'a_phase1', name: 'Domador de Fluidos', desc: 'Complete todas as tarefas da Fase 1', emoji: '💧', check: s => s.phaseComplete[1] },
-  { id: 'a_phase2', name: 'Mestre do Balanço', desc: 'Complete todas as tarefas da Fase 2', emoji: '⚖️', check: s => s.phaseComplete[2] },
-  { id: 'a_phase3', name: 'Olho do HAZOP', desc: 'Complete todas as tarefas da Fase 3', emoji: '⚠️', check: s => s.phaseComplete[3] },
-  { id: 'a_phase4', name: 'Guardião SIL', desc: 'Complete todas as tarefas da Fase 4', emoji: '🏰', check: s => s.phaseComplete[4] },
-  { id: 'a_phase5', name: 'Cientista de Dados', desc: 'Complete todas as tarefas da Fase 5', emoji: '🔮', check: s => s.phaseComplete[5] },
-  { id: 'a_phase6', name: 'Consultor Completo', desc: 'Complete todas as tarefas da Fase 6', emoji: '👔', check: s => s.phaseComplete[6] },
-  { id: 'a_first_code', name: 'Primeiro Código', desc: 'Complete qualquer tarefa de ferramenta', emoji: '🧬', check: s => s.toolsBuilt >= 1 },
-  { id: 'a_3tools', name: 'Dashboard Master', desc: 'Construa 3 ferramentas', emoji: '📊', check: s => s.toolsBuilt >= 3 },
-  { id: 'a_all_tools', name: 'Arsenal Completo', desc: 'Construa todas as 6 ferramentas', emoji: '🚀', check: s => s.toolsBuilt >= 6 },
-  { id: 'a_first_market', name: 'Primeiro Contato', desc: 'Complete qualquer tarefa comercial', emoji: '🤝', check: s => s.marketTasks >= 1 },
-  { id: 'a_3market', name: 'Networker', desc: 'Complete 3 tarefas comerciais', emoji: '🎯', check: s => s.marketTasks >= 3 },
-  { id: 'a_streak7', name: 'Semana Perfeita', desc: 'Sequência de 7 dias', emoji: '📅', check: s => s.streak >= 7 },
-  { id: 'a_streak30', name: 'Mês de Ferro', desc: 'Sequência de 30 dias', emoji: '🗓️', check: s => s.streak >= 30 },
-  { id: 'a_halfxp', name: 'Meio Caminho', desc: 'Acumule 6.500 XP', emoji: '⚡', check: s => s.xp >= 6500 },
-  { id: 'a_allcomplete', name: 'Sócio-Fundador', desc: 'Complete TODAS as tarefas', emoji: '👑', check: s => s.totalCompleted >= 87 },
+  { id: 'a_first_task', name: 'Primeiro Passo', desc: 'Complete sua primeira tarefa', icon: '<i class="ph ph-plant"></i>', check: s => s.totalCompleted >= 1 },
+  { id: 'a_phase1', name: 'Domador de Fluidos', desc: 'Complete Fase 1', icon: '<i class="ph ph-drop"></i>', check: s => s.phaseComplete[1] },
+  { id: 'a_phase2', name: 'Mestre do Balanço', desc: 'Complete Fase 2', icon: '<i class="ph ph-scales"></i>', check: s => s.phaseComplete[2] },
+  { id: 'a_phase3', name: 'Olho do HAZOP', desc: 'Complete Fase 3', icon: '<i class="ph ph-warning-circle"></i>', check: s => s.phaseComplete[3] },
+  { id: 'a_phase4', name: 'Guardião SIL', desc: 'Complete Fase 4', icon: '<i class="ph ph-shield"></i>', check: s => s.phaseComplete[4] },
+  { id: 'a_phase5', name: 'Cientista de Dados', desc: 'Complete Fase 5', icon: '<i class="ph ph-magic-wand"></i>', check: s => s.phaseComplete[5] },
+  { id: 'a_phase6', name: 'Consultor Completo', desc: 'Complete Fase 6', icon: '<i class="ph ph-tie"></i>', check: s => s.phaseComplete[6] },
+  { id: 'a_first_code', name: 'Primeiro Código', desc: 'Construa uma ferramenta', icon: '<i class="ph ph-terminal-window"></i>', check: s => s.toolsBuilt >= 1 },
+  { id: 'a_3tools', name: 'Dashboard Master', desc: 'Construa 3 ferramentas', icon: '<i class="ph ph-chart-line-up"></i>', check: s => s.toolsBuilt >= 3 },
+  { id: 'a_all_tools', name: 'Arsenal Completo', desc: 'Construa 6 ferramentas', icon: '<i class="ph ph-rocket-launch"></i>', check: s => s.toolsBuilt >= 6 },
+  { id: 'a_first_market', name: 'Primeiro Contato', desc: 'Completo tarefa comercial', icon: '<i class="ph ph-handshake"></i>', check: s => s.marketTasks >= 1 },
+  { id: 'a_3market', name: 'Networker', desc: 'Complete 3 tarefas comerciais', icon: '<i class="ph ph-users-three"></i>', check: s => s.marketTasks >= 3 },
+  { id: 'a_streak7', name: 'Semana Perfeita', desc: 'Sequência de 7 dias', icon: '<i class="ph ph-calendar-check"></i>', check: s => s.streak >= 7 },
+  { id: 'a_streak30', name: 'Mês de Ferro', desc: 'Sequência de 30 dias', icon: '<i class="ph ph-calendar-star"></i>', check: s => s.streak >= 30 },
+  { id: 'a_halfxp', name: 'Meio Caminho', desc: 'Acumule 6.500 XP', icon: '<i class="ph ph-lightning"></i>', check: s => s.xp >= 6500 },
+  { id: 'a_allcomplete', name: 'Sócio-Fundador', desc: 'Complete TODAS as tarefas', icon: '<i class="ph ph-crown"></i>', check: s => s.totalCompleted >= 87 },
 ];
 
 const QUOTES = [
-  '"Build something real every month. Take every concept to market. Compound relentlessly." 🚀',
-  '"The engineer who can calculate it, assess the risk, detect the anomaly, AND build the tool — that engineer is in a category of one." 🏭',
-  '"Theory that is never tested in practice decays. Theory that is sold to a client compounds." 💰',
-  '"You do not need to become a software engineer. You need to become the translator." 🔄',
-  '"Your portfolio is not a list of credentials — it is a collection of proof." 📋',
-  '"Interactive tools that a client can test are worth ten times more than reports they must read." 🛠️',
-  '"The hardest job is the first one. After that, momentum takes over." 🎯',
-  '"Consistency beats intensity. Show up every day." 🔥',
-  '"The market is looking for specialists who can translate — between the plant floor and the boardroom." 🏢',
-  '"Even one averted shutdown pays for months of consulting." 💎',
+  '"Build something real every month. Take every concept to market. Compound relentlessly."',
+  '"The engineer who can calculate it, assess the risk, detect the anomaly, AND build the tool — that engineer is in a category of one."',
+  '"Theory that is never tested in practice decays. Theory that is sold to a client compounds."',
+  '"You do not need to become a software engineer. You need to become the translator."',
+  '"Your portfolio is not a list of credentials — it is a collection of proof."',
+  '"Interactive tools that a client can test are worth ten times more than reports they must read."',
+  '"The hardest job is the first one. After that, momentum takes over."',
+  '"Consistency beats intensity. Show up every day."',
+  '"The market is looking for specialists who can translate — between the plant floor and the boardroom."',
+  '"Even one averted shutdown pays for months of consulting."',
 ];
 
 const TYPE_LABELS = {
-  study: '📖 Estudo', project: '🔧 Projeto', tool: '🤖 IA',
-  scenario: '🌋 Cenário', deliverable: '📄 Entrega', market: '💼 Comercial'
+  study: 'Estudo', project: 'Projeto', tool: 'Form. IA',
+  scenario: 'Cenário', deliverable: 'Entrega', market: 'Comercial'
 };
 
 // ===== HÁBITOS SEMANAIS =====
 const WEEKLY_HABITS = [
-  { id: 'h_outreach', name: 'Fazer pelo menos 5 abordagens (e-mail, ligação ou visita)', emoji: '📧', category: 'outreach' },
-  { id: 'h_followup', name: 'Follow-up em todos os contatos sem resposta', emoji: '🔄', category: 'outreach' },
-  { id: 'h_build', name: 'Avançar no dashboard/ferramenta (mínimo 2h)', emoji: '🛠️', category: 'velocity' },
-  { id: 'h_task', name: 'Completar pelo menos 1 tarefa do roadmap', emoji: '✅', category: 'velocity' },
-  { id: 'h_ship', name: 'Mostrar algo incompleto para alguém (mentor, amigo, prospect)', emoji: '🚀', category: 'ship' },
-  { id: 'h_content', name: 'Postar 1 conteúdo técnico no LinkedIn', emoji: '📝', category: 'ship' },
+  { id: 'h_outreach', name: 'Fazer 5 abordagens (e-mail/visita)', icon: '<i class="ph ph-envelope-simple"></i>', category: 'outreach' },
+  { id: 'h_followup', name: 'Follow-up em todos os contatos', icon: '<i class="ph ph-arrows-clockwise"></i>', category: 'outreach' },
+  { id: 'h_build', name: 'Avançar na ferramenta (min 2h)', icon: '<i class="ph ph-wrench"></i>', category: 'velocity' },
+  { id: 'h_task', name: 'Completar 1 tarefa do roadmap', icon: '<i class="ph ph-check-circle"></i>', category: 'velocity' },
+  { id: 'h_ship', name: 'Mostrar progresso para um lead/mentor', icon: '<i class="ph ph-rocket"></i>', category: 'ship' },
+  { id: 'h_content', name: 'Postar conteúdo técnico (LinkedIn)', icon: '<i class="ph ph-files"></i>', category: 'ship' },
 ];
 
-// ===== STATE =====
 let state = loadState();
 let activePhase = 1;
-let currentRoadmap = 'international'; // 'international' | 'consultoria'
+let currentRoadmap = 'international'; 
 
 function getActivePhases() {
-  if (currentRoadmap === 'consultoria') return CONSULTORIA_PHASES;
-  if (currentRoadmap === 'vendas') return VENDAS_PHASES;
+  if (currentRoadmap === 'consultoria') return typeof CONSULTORIA_PHASES !== 'undefined' ? CONSULTORIA_PHASES : PHASES;
+  if (currentRoadmap === 'vendas') return typeof VENDAS_PHASES !== 'undefined' ? VENDAS_PHASES : PHASES;
   return PHASES;
 }
 function getActiveDetails() {
-  if (currentRoadmap === 'vendas') return VENDAS_TASK_DETAILS;
-  return currentRoadmap === 'international' ? TASK_DETAILS : CONSULTORIA_TASK_DETAILS;
+  if (currentRoadmap === 'vendas') return typeof VENDAS_TASK_DETAILS !== 'undefined' ? VENDAS_TASK_DETAILS : {};
+  return currentRoadmap === 'international' ? (typeof TASK_DETAILS !== 'undefined' ? TASK_DETAILS : {}) : (typeof CONSULTORIA_TASK_DETAILS !== 'undefined' ? CONSULTORIA_TASK_DETAILS : {});
 }
 function switchRoadmap(rm) {
   currentRoadmap = rm;
@@ -161,12 +160,11 @@ function saveState() {
   localStorage.setItem('chemquest_state', JSON.stringify(state));
 }
 
-// ===== CALCULATIONS ====
 function calcXP() {
   let xp = 0;
   PHASES.forEach(p => p.tasks.forEach(t => { if (state.completed[t.id]) xp += t.xp; }));
-  CONSULTORIA_PHASES.forEach(p => p.tasks.forEach(t => { if (state.completed[t.id]) xp += t.xp; }));
-  VENDAS_PHASES.forEach(p => p.tasks.forEach(t => { if (state.completed[t.id]) xp += t.xp; }));
+  if (typeof CONSULTORIA_PHASES !== 'undefined') CONSULTORIA_PHASES.forEach(p => p.tasks.forEach(t => { if (state.completed[t.id]) xp += t.xp; }));
+  if (typeof VENDAS_PHASES !== 'undefined') VENDAS_PHASES.forEach(p => p.tasks.forEach(t => { if (state.completed[t.id]) xp += t.xp; }));
   return xp;
 }
 
@@ -183,7 +181,10 @@ function calcStats() {
   const rank = calcRank(xp);
   let totalCompleted = 0, totalTasks = 0, toolsBuilt = 0, marketTasks = 0;
   const phaseComplete = {};
-  const allPhases = [...PHASES, ...CONSULTORIA_PHASES, ...VENDAS_PHASES];
+  const allPhases = [...PHASES];
+  if (typeof CONSULTORIA_PHASES !== 'undefined') allPhases.push(...CONSULTORIA_PHASES);
+  if (typeof VENDAS_PHASES !== 'undefined') allPhases.push(...VENDAS_PHASES);
+  
   allPhases.forEach(p => {
     let pDone = 0;
     p.tasks.forEach(t => {
@@ -196,11 +197,11 @@ function calcStats() {
       }
     });
     let suffix = 'int';
-    if (CONSULTORIA_PHASES.includes(p)) suffix = 'con';
-    if (VENDAS_PHASES.includes(p)) suffix = 'ven';
+    if (typeof CONSULTORIA_PHASES !== 'undefined' && CONSULTORIA_PHASES.includes(p)) suffix = 'con';
+    if (typeof VENDAS_PHASES !== 'undefined' && VENDAS_PHASES.includes(p)) suffix = 'ven';
     phaseComplete[p.id + '_' + suffix] = pDone === p.tasks.length;
   });
-  // Also track per-roadmap phase completion for achievements
+  
   PHASES.forEach(p => {
     const done = p.tasks.filter(t => state.completed[t.id]).length;
     phaseComplete[p.id] = done === p.tasks.length;
@@ -208,7 +209,6 @@ function calcStats() {
   return { xp, rank, totalCompleted, totalTasks, toolsBuilt, marketTasks, phaseComplete, streak: state.streak };
 }
 
-// ===== WEEKLY HABITS =====
 function getCurrentISOWeek() {
   const now = new Date();
   const start = new Date(now.getFullYear(), 0, 1);
@@ -246,9 +246,9 @@ function renderHabits() {
   const pct = Math.round((done / total) * 100);
 
   const categoryLabels = {
-    outreach: '📞 Prospecção',
-    velocity: '⚡ Velocidade',
-    ship: '🚀 Entregar'
+    outreach: 'Prospecção',
+    velocity: 'Velocidade',
+    ship: 'Publicação'
   };
 
   const grouped = {};
@@ -258,42 +258,30 @@ function renderHabits() {
   });
 
   container.innerHTML = `
-    <div class="habits-header">
-      <div class="habits-title">
-        <span class="habits-icon">🔁</span>
-        <div>
-          <h3>Hábitos Semanais</h3>
-          <p>${done}/${total} completos esta semana · ${pct}%</p>
-        </div>
-      </div>
-      <div class="habits-ring">
-        <svg viewBox="0 0 36 36" class="habits-svg">
-          <path class="habits-ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-          <path class="habits-ring-fill" stroke-dasharray="${pct}, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-        </svg>
-        <span class="habits-ring-text">${pct}%</span>
+    <div class="habits-header" style="margin-bottom: 24px; display:flex; gap:16px;">
+      <div class="habits-title" style="flex:1;">
+        <h3 style="font-size:1.1rem; color:var(--text-primary);"><i class="ph ph-repeat"></i> Hábitos Semanais</h3>
+        <p style="color:var(--text-secondary); font-size:0.85rem;">Consistência: ${done}/${total} hábitos · ${pct}% efetivo</p>
       </div>
     </div>
-    <div class="habits-groups">
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:16px;">
       ${Object.entries(grouped).map(([cat, items]) => `
-        <div class="habits-group">
-          <div class="habits-cat-label">${categoryLabels[cat]}</div>
+        <div style="border: 1px solid var(--border); background: var(--bg-glass); border-radius: 8px; padding: 16px;">
+          <div style="font-size:0.65rem; text-transform:uppercase; letter-spacing:0.1em; font-family:'JetBrains Mono', monospace; color:var(--text-muted); margin-bottom:12px;">${categoryLabels[cat]}</div>
           ${items.map(h => {
             const checked = !!habits[h.id];
-            return `<div class="habit-item ${checked ? 'done' : ''}" onclick="toggleHabit('${h.id}')">
-              <div class="habit-check">${checked ? '✓' : ''}</div>
-              <span class="habit-emoji">${h.emoji}</span>
-              <span class="habit-name">${h.name}</span>
+            return `<div style="display:flex; align-items:center; gap:8px; margin-bottom:8px; cursor:pointer; opacity:${checked ? '0.5':'1'}" onclick="toggleHabit('${h.id}')">
+              <div style="width:18px;height:18px;border:1px solid ${checked?'var(--text-secondary)':'var(--text-muted)'}; background:${checked?'var(--text-secondary)':'transparent'};border-radius:4px;"></div>
+              <span style="font-size:1rem;color:var(--text-primary);">${h.icon}</span>
+              <span style="font-size:0.85rem;">${h.name}</span>
             </div>`;
           }).join('')}
         </div>
       `).join('')}
     </div>
-    ${done === total ? '<div class="habits-complete">🎉 Semana perfeita! Continue assim.</div>' : ''}
   `;
 }
 
-// ===== STREAK =====
 function updateStreak() {
   const today = new Date().toISOString().split('T')[0];
   if (state.lastDate === today) return;
@@ -308,14 +296,14 @@ function updateStreak() {
   saveState();
 }
 
-// ===== CONFETTI =====
 function launchConfetti(duration = 1500) {
   const canvas = document.getElementById('confetti-canvas');
+  if(!canvas) return;
   const ctx = canvas.getContext('2d');
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   const particles = [];
-  const colors = ['#00d4ff', '#7c3aed', '#f43f5e', '#f59e0b', '#10b981', '#3b82f6'];
+  const colors = ['#10b981', '#34d399', '#6ee7b7', '#f8fafc', '#94a3b8']; // Emerald/slate
   for (let i = 0; i < 80; i++) {
     particles.push({
       x: canvas.width / 2 + (Math.random() - 0.5) * 200,
@@ -353,19 +341,19 @@ function launchConfetti(duration = 1500) {
   animate();
 }
 
-// ===== XP POPUP =====
 function showXPPopup(amount) {
   const popup = document.getElementById('xp-popup');
+  if(!popup) return;
   popup.querySelector('.xp-amount').textContent = `+${amount}`;
   popup.classList.remove('show');
   void popup.offsetWidth;
   popup.classList.add('show');
 }
 
-// ===== RANK UP =====
 function showRankUp(rank) {
   const overlay = document.getElementById('rank-up-overlay');
-  overlay.querySelector('.rank-emoji').textContent = RANKS[rank].emoji;
+  if(!overlay) return;
+  overlay.querySelector('.rank-emoji').innerHTML = RANKS[rank].icon;
   overlay.querySelector('h2').textContent = RANKS[rank].title;
   overlay.querySelector('p').textContent = `Nível ${rank} desbloqueado!`;
   overlay.classList.add('show');
@@ -373,7 +361,6 @@ function showRankUp(rank) {
   overlay.querySelector('.dismiss').onclick = () => overlay.classList.remove('show');
 }
 
-// ===== RENDER =====
 function render() {
   const stats = calcStats();
   const nextRank = stats.rank < RANKS.length - 1 ? stats.rank + 1 : stats.rank;
@@ -381,113 +368,179 @@ function render() {
   const xpForNext = RANKS[nextRank].xp;
   const xpProgress = xpForNext > xpForCurrent ? ((stats.xp - xpForCurrent) / (xpForNext - xpForCurrent)) * 100 : 100;
 
-  // Stats
-  document.getElementById('stat-rank').textContent = `${RANKS[stats.rank].emoji} ${RANKS[stats.rank].title}`;
-  document.getElementById('stat-rank').style.fontSize = '1.1rem';
+  document.getElementById('stat-rank').innerHTML = `${RANKS[stats.rank].icon} <span style="font-size: 1rem; margin-left: 6px;">${RANKS[stats.rank].title}</span>`;
   document.getElementById('stat-xp').textContent = stats.xp.toLocaleString();
-  document.getElementById('stat-streak').textContent = `${stats.streak} 🔥`;
+  document.getElementById('stat-streak').textContent = `${stats.streak}x`;
   document.getElementById('stat-tasks').textContent = `${stats.totalCompleted}/${stats.totalTasks}`;
   document.getElementById('stat-tasks-detail').textContent = `${Math.round(stats.totalCompleted / stats.totalTasks * 100)}% completo`;
 
-  // XP Bar
-  document.getElementById('current-rank-label').textContent = `${RANKS[stats.rank].emoji} ${RANKS[stats.rank].title}`;
-  document.getElementById('next-rank-label').textContent = stats.rank < RANKS.length - 1
-    ? `Próximo: ${RANKS[nextRank].emoji} ${RANKS[nextRank].title}`
-    : '🎉 Nível Máximo!';
+  document.getElementById('current-rank-label').innerHTML = `${RANKS[stats.rank].title}`;
+  document.getElementById('next-rank-label').textContent = stats.rank < RANKS.length - 1 ? `Próximo: ${RANKS[nextRank].title}` : 'Nível Máximo!';
   document.getElementById('xp-numbers').textContent = `${stats.xp} / ${xpForNext} XP`;
   document.getElementById('xp-bar-fill').style.width = `${Math.min(xpProgress, 100)}%`;
 
-  // Weekly Habits
   renderHabits();
 
-  // Roadmap Tabs
   document.getElementById('roadmap-tabs').innerHTML = `
     <div class="roadmap-tab ${currentRoadmap === 'international' ? 'active' : ''}" onclick="switchRoadmap('international')">
-      📚 Formação Técnica
+      <i class="ph ph-books"></i> Formação Técnica
     </div>
     <div class="roadmap-tab ${currentRoadmap === 'consultoria' ? 'active' : ''}" onclick="switchRoadmap('consultoria')">
-      🇧🇷 Consultoria BH
+      <i class="ph ph-briefcase"></i> Consultoria
     </div>
     <div class="roadmap-tab ${currentRoadmap === 'vendas' ? 'active' : ''}" onclick="switchRoadmap('vendas')">
-      🗣️ Vendas & Coragem
+      <i class="ph ph-handshake"></i> Vendas
     </div>
     <div class="roadmap-tab ${currentRoadmap === 'calendario' ? 'active' : ''}" onclick="switchRoadmap('calendario')">
-      📅 Calendário
+      <i class="ph ph-calendar"></i> Calendário
     </div>
   `;
 
-  // Calendar vs Phase view
   if (currentRoadmap === 'calendario') {
     document.getElementById('phase-tabs').innerHTML = '';
-    document.getElementById('phase-content').innerHTML = renderCalendar();
+    document.getElementById('phase-content').innerHTML = typeof renderCalendar !== 'undefined' ? renderCalendar() : '<p>Nenhuma configuração de calendário encontrada.</p>';
   } else {
-  // Phase Tabs
-  const phases = getActivePhases();
-  const tabsContainer = document.getElementById('phase-tabs');
-  tabsContainer.innerHTML = phases.map(p => {
-    const done = p.tasks.filter(t => state.completed[t.id]).length;
-    const pct = (done / p.tasks.length) * 100;
-    return `<div class="phase-tab ${activePhase === p.id ? 'active' : ''}" data-phase="${p.id}" onclick="setPhase(${p.id})">
-      ${p.icon} Fase ${p.id}
-      <div class="tab-progress" style="width: ${pct}%"></div>
-    </div>`;
-  }).join('');
+    const phases = getActivePhases();
+    const tabsContainer = document.getElementById('phase-tabs');
+    tabsContainer.innerHTML = phases.map(p => {
+      const done = p.tasks.filter(t => state.completed[t.id]).length;
+      return `<div class="phase-tab ${activePhase === p.id ? 'active' : ''}" data-phase="${p.id}" onclick="setPhase(${p.id})">
+        0${p.id} ${p.name.split(' ')[0]}
+      </div>`;
+    }).join('');
 
-  // Phase Content
-  const phase = phases.find(p => p.id === activePhase);
-  const phaseDone = phase.tasks.filter(t => state.completed[t.id]).length;
-  const phasePct = (phaseDone / phase.tasks.length) * 100;
-
-  document.getElementById('phase-content').innerHTML = `
-    <div class="phase-header">
-      <div class="phase-icon" style="background: ${phase.color}22; color: ${phase.color}">${phase.icon}</div>
-      <div class="phase-info" style="flex:1">
-        <h2>${phase.name}</h2>
-        <p>${phase.months} · ${phaseDone}/${phase.tasks.length} tarefas</p>
-        <div class="phase-progress-bar">
-          <div class="phase-progress-fill" style="width: ${phasePct}%; background: ${phase.color}"></div>
-        </div>
-      </div>
-    </div>
-    <div class="task-list">
-      ${phase.tasks.map(t => {
-        const done = !!state.completed[t.id];
-        return `<div class="task-item ${done ? 'completed' : ''}" id="task-${t.id}">
-          <div class="task-checkbox" onclick="event.stopPropagation(); toggleTask('${t.id}', ${t.xp})">${done ? '✓' : ''}</div>
-          <div class="task-body" onclick="openTaskDetail('${t.id}')">
-            <span class="task-type ${t.type}">${TYPE_LABELS[t.type]}</span>
-            <span class="task-name">${t.name}</span>
+    const phase = phases.find(p => p.id === activePhase);
+    if(phase) {
+        const phaseDone = phase.tasks.filter(t => state.completed[t.id]).length;
+        document.getElementById('phase-content').innerHTML = `
+          <div class="phase-header">
+            <div class="phase-icon">${phase.icon || '<i class="ph ph-folder"></i>'}</div>
+            <div class="phase-info">
+              <h2>${phase.name}</h2>
+              <p>${phase.months} · ${phaseDone}/${phase.tasks.length} tarefas completas</p>
+            </div>
           </div>
-          <span class="task-xp">+${t.xp} XP</span>
+          <div class="task-list">
+            ${phase.tasks.map(t => {
+              const done = !!state.completed[t.id];
+              return `<div class="task-item ${done ? 'completed' : ''}" id="task-${t.id}">
+                <div class="task-checkbox" onclick="event.stopPropagation(); toggleTask('${t.id}', ${t.xp})">${done ? '<i class="ph ph-check"></i>' : ''}</div>
+                <div class="task-body" onclick="openTaskDetail('${t.id}')">
+                  <span class="task-type ${t.type}">${TYPE_LABELS[t.type] || t.type}</span>
+                  <span class="task-name">${t.name}</span>
+                </div>
+                <span class="task-xp">+${t.xp} XP</span>
+              </div>`;
+            }).join('')}
+          </div>
+        `;
+    }
+  }
+
+  const el = document.getElementById('achievements-grid');
+  if(el) {
+      el.innerHTML = ACHIEVEMENTS.map(a => {
+        const unlocked = !!state.unlockedAchievements[a.id];
+        return `<div class="achievement ${unlocked ? 'unlocked' : 'locked'}" id="ach-${a.id}">
+          <span class="achievement-icon" style="color:var(--text-primary);">${a.icon}</span>
+          <div class="achievement-info">
+            <div class="name">${a.name}</div>
+            <div class="desc">${a.desc}</div>
+          </div>
         </div>`;
-      }).join('')}
-    </div>
-  `;
-  } // end of else (phase view)
+      }).join('');
+  }
 
-  // Achievements
-  document.getElementById('achievements-grid').innerHTML = ACHIEVEMENTS.map(a => {
-    const unlocked = !!state.unlockedAchievements[a.id];
-    return `<div class="achievement ${unlocked ? 'unlocked' : 'locked'}" id="ach-${a.id}">
-      <span class="achievement-icon">${a.emoji}</span>
-      <div class="achievement-info">
-        <div class="name">${a.name}</div>
-        <div class="desc">${a.desc}</div>
-      </div>
-    </div>`;
-  }).join('');
-
-  // Quote
-  const quoteIdx = Math.floor(Date.now() / 86400000) % QUOTES.length;
-  document.getElementById('daily-quote-text').textContent = QUOTES[quoteIdx];
+  const quoteEl = document.getElementById('daily-quote-text');
+  if(quoteEl) {
+      const quoteIdx = Math.floor(Date.now() / 86400000) % QUOTES.length;
+      quoteEl.textContent = QUOTES[quoteIdx];
+  }
 }
+
+function setPhase(id) {
+  activePhase = id;
+  render();
+}
+
+function toggleTask(taskId, xp) {
+  const prevStats = calcStats();
+  if (state.completed[taskId]) {
+    delete state.completed[taskId];
+  } else {
+    state.completed[taskId] = true;
+    updateStreak();
+    showXPPopup(xp);
+    launchConfetti(800);
+  }
+  saveState();
+  const newStats = calcStats();
+
+  if (newStats.rank > prevStats.rank) {
+    setTimeout(() => showRankUp(newStats.rank), 600);
+  }
+
+  ACHIEVEMENTS.forEach(a => {
+    if (!state.unlockedAchievements[a.id] && a.check(newStats)) {
+      state.unlockedAchievements[a.id] = true;
+      saveState();
+      setTimeout(() => {
+        const el = document.getElementById(`ach-${a.id}`);
+        if (el) { el.classList.remove('locked'); el.classList.add('unlocked', 'just-unlocked'); }
+      }, 800);
+    }
+  });
+
+  const taskEl = document.getElementById(`task-${taskId}`);
+  if (taskEl && state.completed[taskId]) {
+    taskEl.classList.add('just-completed');
+    setTimeout(() => taskEl.classList.remove('just-completed'), 500);
+  }
+
+  render();
+}
+
+function openTaskDetail(taskId) {
+  const detail = getActiveDetails()[taskId];
+  if (!detail) return;
+  const done = !!state.completed[taskId];
+  const phases = getActivePhases();
+  let task = null;
+  phases.forEach(p => { p.tasks.forEach(t => { if(t.id === taskId) task = t; }); });
+  if(!task) return;
+  
+  const modal = document.getElementById('task-detail-modal');
+  modal.querySelector('.detail-title').textContent = detail.title;
+  modal.querySelector('.detail-what').textContent = detail.what;
+  modal.querySelector('.detail-todo').innerHTML = detail.todo.map(item => `<li>${item}</li>`).join('');
+  modal.querySelector('.detail-resources').textContent = detail.resources;
+  modal.querySelector('.detail-criteria').textContent = detail.criteria;
+  modal.querySelector('.detail-xp-value').textContent = `+${task.xp} XP`;
+  const btn = modal.querySelector('.detail-complete-btn');
+  btn.innerHTML = done ? 'DESMARCAR <i class="ph ph-x"></i>' : 'CONCLUIR <i class="ph ph-check"></i>';
+  btn.className = 'detail-complete-btn ' + (done ? 'undo' : '');
+  btn.onclick = () => { toggleTask(taskId, task.xp); openTaskDetail(taskId); };
+  modal.classList.add('show');
+}
+
+function closeDetail() {
+  document.getElementById('task-detail-modal').classList.remove('show');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  render();
+  document.getElementById('task-detail-modal').addEventListener('click', (e) => {
+    if (e.target.classList.contains('task-detail-modal')) closeDetail();
+  });
+});
 
 // ===== CALENDAR RENDER =====
 function renderCalendar() {
+  if (typeof WEEKLY_SCHEDULE === 'undefined' || typeof getCurrentWeek === 'undefined') return '<p>Calendário não encontrado.</p>';
   const curWeek = getCurrentWeek();
   return `
     <div class="cal-header">
-      <div class="cal-icon">📅</div>
+      <div class="cal-icon"><i class="ph ph-calendar"></i></div>
       <div class="cal-info">
         <h2>Calendário Semanal</h2>
         <p>Início: 26/03/2026 · Semana atual: ${curWeek} · ${WEEKLY_SCHEDULE.length} semanas no total</p>
@@ -517,11 +570,11 @@ function renderCalendar() {
               const td = findTaskData(tid);
               if (!td) return '';
               const done = !!state.completed[tid];
-              let src = '📚';
-              if (td.source === 'consultoria') src = '🇧🇷';
-              if (td.source === 'vendas') src = '🗣️';
+              let src = '<i class="ph ph-books"></i>';
+              if (td.source === 'consultoria') src = '<i class="ph ph-briefcase"></i>';
+              if (td.source === 'vendas') src = '<i class="ph ph-handshake"></i>';
               return `<div class="task-item ${done ? 'completed' : ''}" id="task-${tid}">
-                <div class="task-checkbox" onclick="event.stopPropagation(); toggleTask('${tid}', ${td.task.xp})">${done ? '✓' : ''}</div>
+                <div class="task-checkbox" onclick="event.stopPropagation(); toggleTask('${tid}', ${td.task.xp})">${done ? '<i class="ph ph-check"></i>' : ''}</div>
                 <div class="task-body" onclick="openTaskDetailCal('${tid}')">
                   <span class="cal-source">${src}</span>
                   <span class="task-type ${td.task.type}">${TYPE_LABELS[td.task.type]}</span>
@@ -551,88 +604,8 @@ function openTaskDetailCal(taskId) {
   modal.querySelector('.detail-criteria').textContent = detail.criteria;
   modal.querySelector('.detail-xp-value').textContent = `+${td.task.xp} XP`;
   const btn = modal.querySelector('.detail-complete-btn');
-  btn.textContent = done ? '↩ Desmarcar como Concluída' : '✓ Marcar como Concluída';
+  btn.innerHTML = done ? 'DESMARCAR <i class="ph ph-x"></i>' : 'CONCLUIR <i class="ph ph-check"></i>';
   btn.className = 'detail-complete-btn ' + (done ? 'undo' : '');
   btn.onclick = () => { toggleTask(taskId, td.task.xp); openTaskDetailCal(taskId); };
   modal.classList.add('show');
 }
-
-// ===== ACTIONS =====
-function setPhase(id) {
-  activePhase = id;
-  render();
-}
-
-function toggleTask(taskId, xp) {
-  const prevStats = calcStats();
-  if (state.completed[taskId]) {
-    delete state.completed[taskId];
-  } else {
-    state.completed[taskId] = true;
-    updateStreak();
-    showXPPopup(xp);
-    launchConfetti(800);
-  }
-  saveState();
-  const newStats = calcStats();
-
-  // Check rank up
-  if (newStats.rank > prevStats.rank) {
-    setTimeout(() => showRankUp(newStats.rank), 600);
-  }
-
-  // Check new achievements
-  ACHIEVEMENTS.forEach(a => {
-    if (!state.unlockedAchievements[a.id] && a.check(newStats)) {
-      state.unlockedAchievements[a.id] = true;
-      saveState();
-      setTimeout(() => {
-        const el = document.getElementById(`ach-${a.id}`);
-        if (el) { el.classList.remove('locked'); el.classList.add('unlocked', 'just-unlocked'); }
-      }, 800);
-    }
-  });
-
-  // Animate task
-  const taskEl = document.getElementById(`task-${taskId}`);
-  if (taskEl && state.completed[taskId]) {
-    taskEl.classList.add('just-completed');
-    setTimeout(() => taskEl.classList.remove('just-completed'), 500);
-  }
-
-  render();
-}
-
-// ===== TASK DETAIL MODAL =====
-function openTaskDetail(taskId) {
-  const detail = getActiveDetails()[taskId];
-  if (!detail) return;
-  const done = !!state.completed[taskId];
-  const task = getActivePhases().flatMap(p => p.tasks).find(t => t.id === taskId);
-  const modal = document.getElementById('task-detail-modal');
-  modal.querySelector('.detail-title').textContent = detail.title;
-  modal.querySelector('.detail-what').textContent = detail.what;
-  modal.querySelector('.detail-todo').innerHTML = detail.todo.map(item =>
-    `<li>${item}</li>`
-  ).join('');
-  modal.querySelector('.detail-resources').textContent = detail.resources;
-  modal.querySelector('.detail-criteria').textContent = detail.criteria;
-  modal.querySelector('.detail-xp-value').textContent = `+${task.xp} XP`;
-  const btn = modal.querySelector('.detail-complete-btn');
-  btn.textContent = done ? '↩ Desmarcar como Concluída' : '✓ Marcar como Concluída';
-  btn.className = 'detail-complete-btn ' + (done ? 'undo' : '');
-  btn.onclick = () => { toggleTask(taskId, task.xp); openTaskDetail(taskId); };
-  modal.classList.add('show');
-}
-
-function closeDetail() {
-  document.getElementById('task-detail-modal').classList.remove('show');
-}
-
-// ===== INIT =====
-document.addEventListener('DOMContentLoaded', () => {
-  render();
-  document.getElementById('task-detail-modal').addEventListener('click', (e) => {
-    if (e.target.classList.contains('task-detail-modal')) closeDetail();
-  });
-});
