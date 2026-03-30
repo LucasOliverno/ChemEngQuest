@@ -1,13 +1,13 @@
 // ===== GAME DATA =====
 const RANKS = [
-  { title: 'Estagiário Híbrido', emoji: '🔰', xp: 0 },
-  { title: 'AI Trainer Técnico', emoji: '🛠️', xp: 500 },
-  { title: 'Auditor Energético', emoji: '⚡', xp: 1500 },
-  { title: 'Especialista em Processos', emoji: '⚙️', xp: 3500 },
-  { title: 'Engenheiro de Dados Industriais', emoji: '📊', xp: 6000 },
-  { title: 'Consultor Independente', emoji: '💼', xp: 10000 },
-  { title: 'Especialista em Otimização B2B', emoji: '🏭', xp: 14000 },
-  { title: 'Sócio-Fundador (Firm Owner)', emoji: '👑', xp: 18000 },
+  { title: 'Estagiário de Engenharia', emoji: '🔰', xp: 0 },
+  { title: 'Técnico de Processos', emoji: '🛠️', xp: 400 },
+  { title: 'Auditor Energético', emoji: '⚡', xp: 1200 },
+  { title: 'Especialista em Processos', emoji: '⚙️', xp: 2800 },
+  { title: 'Engenheiro de Dados Industriais', emoji: '📊', xp: 5000 },
+  { title: 'Consultor Independente', emoji: '💼', xp: 7500 },
+  { title: 'Especialista em Otimização Industrial', emoji: '🏭', xp: 10000 },
+  { title: 'Sócio-Fundador', emoji: '👑', xp: 13000 },
 ];
 
 const PHASES = [
@@ -19,8 +19,7 @@ const PHASES = [
       { id: 't1_3', name: 'Projeto: Relatório Diagnóstico de Sistema Hidráulico', type: 'project', xp: 200 },
       { id: 't1_4', name: 'Vibe Coding: Calculadora Interativa de Pump System', type: 'tool', xp: 250 },
       { id: 't1_5', name: 'Cenário: Bomba petroquímica com -20% vazão', type: 'scenario', xp: 100 },
-      { id: 't1_6', name: 'Entregável: Relatório + Calculadora + Matriz de Seleção', type: 'deliverable', xp: 150 },
-      { id: 't1_7', name: 'Mercado: Enviar primeira proposta no Upwork', type: 'market', xp: 200 }
+      { id: 't1_6', name: 'Entregável: Relatório + Calculadora + Matriz de Seleção', type: 'deliverable', xp: 150 }
     ]
   },
   {
@@ -31,8 +30,7 @@ const PHASES = [
       { id: 't2_3', name: 'Projeto: Auditoria Completa — Utilidades de Planta', type: 'project', xp: 200 },
       { id: 't2_4', name: 'Vibe Coding: Dashboard de Auditoria de Processos', type: 'tool', xp: 250 },
       { id: 't2_5', name: 'Cenário: Auditoria de vapor em planta de alimentos', type: 'scenario', xp: 100 },
-      { id: 't2_6', name: 'Entregável: Relatório de Auditoria + Dashboard', type: 'deliverable', xp: 150 },
-      { id: 't2_7', name: 'Mercado: Primeiro projeto pago ($50-$200)', type: 'market', xp: 500 },
+      { id: 't2_6', name: 'Entregável: Relatório de Auditoria + Dashboard', type: 'deliverable', xp: 150 }
     ]
   },
   {
@@ -43,8 +41,7 @@ const PHASES = [
       { id: 't3_3', name: 'Projeto: Estudo HAZOP — Alimentação de Reator (3 nós)', type: 'project', xp: 200 },
       { id: 't3_4', name: 'Vibe Coding: Gerador de Planilha HAZOP + Screener', type: 'tool', xp: 250 },
       { id: 't3_5', name: 'Cenário: PSSR de unidade de recuperação de solvente', type: 'scenario', xp: 100 },
-      { id: 't3_6', name: 'Entregável: Template HAZOP + Relatório + Checklist', type: 'deliverable', xp: 150 },
-      { id: 't3_7', name: 'Mercado: 2 propostas de segurança enviadas', type: 'market', xp: 200 },
+      { id: 't3_6', name: 'Entregável: Template HAZOP + Relatório + Checklist', type: 'deliverable', xp: 150 }
     ]
   },
   {
@@ -55,8 +52,7 @@ const PHASES = [
       { id: 't4_3', name: 'Projeto: LOPA cenário alto risco + Investigação incidente', type: 'project', xp: 200 },
       { id: 't4_4', name: 'Vibe Coding: Calculadora LOPA + Banco de Lições', type: 'tool', xp: 250 },
       { id: 't4_5', name: 'Cenário: SIL assessment — tanque atmosférico', type: 'scenario', xp: 100 },
-      { id: 't4_6', name: 'Entregável: Relatório LOPA + Template Investigação', type: 'deliverable', xp: 150 },
-      { id: 't4_7', name: 'Mercado: Primeiro artigo publicado no LinkedIn', type: 'market', xp: 150 },
+      { id: 't4_6', name: 'Entregável: Relatório LOPA + Template Investigação', type: 'deliverable', xp: 150 }
     ]
   },
   {
@@ -67,8 +63,7 @@ const PHASES = [
       { id: 't5_3', name: 'Projeto: Sistema Detecção Anomalias (Tennessee Eastman)', type: 'project', xp: 200 },
       { id: 't5_4', name: 'Vibe Coding: Dashboard de Monitoramento de Planta', type: 'tool', xp: 250 },
       { id: 't5_5', name: 'Cenário: Early warning degradação de compressor', type: 'scenario', xp: 100 },
-      { id: 't5_6', name: 'Entregável: Demo Anomalias + Dashboard + Relatório', type: 'deliverable', xp: 150 },
-      { id: 't5_7', name: 'Mercado: 2 projetos de análise de dados concluídos', type: 'market', xp: 300 },
+      { id: 't5_6', name: 'Entregável: Demo Anomalias + Dashboard + Relatório', type: 'deliverable', xp: 150 }
     ]
   },
   {
@@ -79,8 +74,7 @@ const PHASES = [
       { id: 't6_3', name: 'Capstone: Review integrado para planta química', type: 'project', xp: 300 },
       { id: 't6_4', name: 'Vibe Coding: Plataforma Integrada de Consultoria', type: 'tool', xp: 300 },
       { id: 't6_5', name: 'Cenário: Engajamento completo — pharma 200 funcionários', type: 'scenario', xp: 150 },
-      { id: 't6_6', name: 'Entregável: Pacote completo de consultoria', type: 'deliverable', xp: 200 },
-      { id: 't6_7', name: 'Mercado: Toptal application + outreach direto', type: 'market', xp: 300 },
+      { id: 't6_6', name: 'Entregável: Pacote completo de consultoria', type: 'deliverable', xp: 200 }
     ]
   }
 ];
@@ -91,17 +85,17 @@ const ACHIEVEMENTS = [
   { id: 'a_phase2', name: 'Mestre do Balanço', desc: 'Complete todas as tarefas da Fase 2', emoji: '⚖️', check: s => s.phaseComplete[2] },
   { id: 'a_phase3', name: 'Olho do HAZOP', desc: 'Complete todas as tarefas da Fase 3', emoji: '⚠️', check: s => s.phaseComplete[3] },
   { id: 'a_phase4', name: 'Guardião SIL', desc: 'Complete todas as tarefas da Fase 4', emoji: '🏰', check: s => s.phaseComplete[4] },
-  { id: 'a_phase5', name: 'Data Scientist', desc: 'Complete todas as tarefas da Fase 5', emoji: '🔮', check: s => s.phaseComplete[5] },
-  { id: 'a_phase6', name: 'Consultor', desc: 'Complete todas as tarefas da Fase 6', emoji: '👔', check: s => s.phaseComplete[6] },
-  { id: 'a_first_code', name: 'Primeiro Código', desc: 'Complete qualquer tarefa "Vibe Coding"', emoji: '🧬', check: s => s.toolsBuilt >= 1 },
-  { id: 'a_3tools', name: 'Dashboard Master', desc: 'Construa 3 ferramentas com IA', emoji: '📊', check: s => s.toolsBuilt >= 3 },
+  { id: 'a_phase5', name: 'Cientista de Dados', desc: 'Complete todas as tarefas da Fase 5', emoji: '🔮', check: s => s.phaseComplete[5] },
+  { id: 'a_phase6', name: 'Consultor Completo', desc: 'Complete todas as tarefas da Fase 6', emoji: '👔', check: s => s.phaseComplete[6] },
+  { id: 'a_first_code', name: 'Primeiro Código', desc: 'Complete qualquer tarefa de ferramenta', emoji: '🧬', check: s => s.toolsBuilt >= 1 },
+  { id: 'a_3tools', name: 'Dashboard Master', desc: 'Construa 3 ferramentas', emoji: '📊', check: s => s.toolsBuilt >= 3 },
   { id: 'a_all_tools', name: 'Arsenal Completo', desc: 'Construa todas as 6 ferramentas', emoji: '🚀', check: s => s.toolsBuilt >= 6 },
-  { id: 'a_first_market', name: 'Primeira Proposta', desc: 'Complete qualquer tarefa de Mercado', emoji: '🎣', check: s => s.marketTasks >= 1 },
-  { id: 'a_3market', name: 'Networker', desc: 'Complete 3 tarefas de Mercado', emoji: '🤝', check: s => s.marketTasks >= 3 },
-  { id: 'a_streak7', name: 'Semana Perfeita', desc: 'Streak de 7 dias', emoji: '📅', check: s => s.streak >= 7 },
-  { id: 'a_streak30', name: 'Mês de Ferro', desc: 'Streak de 30 dias', emoji: '🗓️', check: s => s.streak >= 30 },
-  { id: 'a_halfxp', name: 'Meio Caminho', desc: 'Acumule 9.000 XP', emoji: '⚡', check: s => s.xp >= 9000 },
-  { id: 'a_allcomplete', name: 'Sócio-Fundador', desc: 'Complete TODAS as tarefas', emoji: '👑', check: s => s.totalCompleted >= 42 },
+  { id: 'a_first_market', name: 'Primeiro Contato', desc: 'Complete qualquer tarefa comercial', emoji: '🤝', check: s => s.marketTasks >= 1 },
+  { id: 'a_3market', name: 'Networker', desc: 'Complete 3 tarefas comerciais', emoji: '🎯', check: s => s.marketTasks >= 3 },
+  { id: 'a_streak7', name: 'Semana Perfeita', desc: 'Sequência de 7 dias', emoji: '📅', check: s => s.streak >= 7 },
+  { id: 'a_streak30', name: 'Mês de Ferro', desc: 'Sequência de 30 dias', emoji: '🗓️', check: s => s.streak >= 30 },
+  { id: 'a_halfxp', name: 'Meio Caminho', desc: 'Acumule 6.500 XP', emoji: '⚡', check: s => s.xp >= 6500 },
+  { id: 'a_allcomplete', name: 'Sócio-Fundador', desc: 'Complete TODAS as tarefas', emoji: '👑', check: s => s.totalCompleted >= 87 },
 ];
 
 const QUOTES = [
@@ -119,8 +113,18 @@ const QUOTES = [
 
 const TYPE_LABELS = {
   study: '📖 Estudo', project: '🔧 Projeto', tool: '🤖 IA',
-  scenario: '🌋 Cenário', deliverable: '📄 Entrega', market: '💼 Freela'
+  scenario: '🌋 Cenário', deliverable: '📄 Entrega', market: '💼 Comercial'
 };
+
+// ===== HÁBITOS SEMANAIS =====
+const WEEKLY_HABITS = [
+  { id: 'h_outreach', name: 'Fazer pelo menos 5 abordagens (e-mail, ligação ou visita)', emoji: '📧', category: 'outreach' },
+  { id: 'h_followup', name: 'Follow-up em todos os contatos sem resposta', emoji: '🔄', category: 'outreach' },
+  { id: 'h_build', name: 'Avançar no dashboard/ferramenta (mínimo 2h)', emoji: '🛠️', category: 'velocity' },
+  { id: 'h_task', name: 'Completar pelo menos 1 tarefa do roadmap', emoji: '✅', category: 'velocity' },
+  { id: 'h_ship', name: 'Mostrar algo incompleto para alguém (mentor, amigo, prospect)', emoji: '🚀', category: 'ship' },
+  { id: 'h_content', name: 'Postar 1 conteúdo técnico no LinkedIn', emoji: '📝', category: 'ship' },
+];
 
 // ===== STATE =====
 let state = loadState();
@@ -143,7 +147,7 @@ function switchRoadmap(rm) {
 }
 
 function defaultState() {
-  return { completed: {}, streak: 0, lastDate: null, unlockedAchievements: {} };
+  return { completed: {}, streak: 0, lastDate: null, unlockedAchievements: {}, habits: {}, habitsWeek: null };
 }
 
 function loadState() {
@@ -202,6 +206,91 @@ function calcStats() {
     phaseComplete[p.id] = done === p.tasks.length;
   });
   return { xp, rank, totalCompleted, totalTasks, toolsBuilt, marketTasks, phaseComplete, streak: state.streak };
+}
+
+// ===== WEEKLY HABITS =====
+function getCurrentISOWeek() {
+  const now = new Date();
+  const start = new Date(now.getFullYear(), 0, 1);
+  const diff = Math.floor((now - start) / 86400000);
+  return `${now.getFullYear()}-W${Math.ceil((diff + start.getDay() + 1) / 7)}`;
+}
+
+function getHabitsForWeek() {
+  const week = getCurrentISOWeek();
+  if (state.habitsWeek !== week) {
+    state.habits = {};
+    state.habitsWeek = week;
+    saveState();
+  }
+  return state.habits;
+}
+
+function toggleHabit(habitId) {
+  getHabitsForWeek();
+  if (state.habits[habitId]) {
+    delete state.habits[habitId];
+  } else {
+    state.habits[habitId] = true;
+  }
+  saveState();
+  renderHabits();
+}
+
+function renderHabits() {
+  const container = document.getElementById('weekly-habits');
+  if (!container) return;
+  const habits = getHabitsForWeek();
+  const done = WEEKLY_HABITS.filter(h => habits[h.id]).length;
+  const total = WEEKLY_HABITS.length;
+  const pct = Math.round((done / total) * 100);
+
+  const categoryLabels = {
+    outreach: '📞 Prospecção',
+    velocity: '⚡ Velocidade',
+    ship: '🚀 Entregar'
+  };
+
+  const grouped = {};
+  WEEKLY_HABITS.forEach(h => {
+    if (!grouped[h.category]) grouped[h.category] = [];
+    grouped[h.category].push(h);
+  });
+
+  container.innerHTML = `
+    <div class="habits-header">
+      <div class="habits-title">
+        <span class="habits-icon">🔁</span>
+        <div>
+          <h3>Hábitos Semanais</h3>
+          <p>${done}/${total} completos esta semana · ${pct}%</p>
+        </div>
+      </div>
+      <div class="habits-ring">
+        <svg viewBox="0 0 36 36" class="habits-svg">
+          <path class="habits-ring-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+          <path class="habits-ring-fill" stroke-dasharray="${pct}, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+        </svg>
+        <span class="habits-ring-text">${pct}%</span>
+      </div>
+    </div>
+    <div class="habits-groups">
+      ${Object.entries(grouped).map(([cat, items]) => `
+        <div class="habits-group">
+          <div class="habits-cat-label">${categoryLabels[cat]}</div>
+          ${items.map(h => {
+            const checked = !!habits[h.id];
+            return `<div class="habit-item ${checked ? 'done' : ''}" onclick="toggleHabit('${h.id}')">
+              <div class="habit-check">${checked ? '✓' : ''}</div>
+              <span class="habit-emoji">${h.emoji}</span>
+              <span class="habit-name">${h.name}</span>
+            </div>`;
+          }).join('')}
+        </div>
+      `).join('')}
+    </div>
+    ${done === total ? '<div class="habits-complete">🎉 Semana perfeita! Continue assim.</div>' : ''}
+  `;
 }
 
 // ===== STREAK =====
@@ -278,7 +367,7 @@ function showRankUp(rank) {
   const overlay = document.getElementById('rank-up-overlay');
   overlay.querySelector('.rank-emoji').textContent = RANKS[rank].emoji;
   overlay.querySelector('h2').textContent = RANKS[rank].title;
-  overlay.querySelector('p').textContent = `Rank ${rank} desbloqueado!`;
+  overlay.querySelector('p').textContent = `Nível ${rank} desbloqueado!`;
   overlay.classList.add('show');
   launchConfetti(3000);
   overlay.querySelector('.dismiss').onclick = () => overlay.classList.remove('show');
@@ -304,14 +393,17 @@ function render() {
   document.getElementById('current-rank-label').textContent = `${RANKS[stats.rank].emoji} ${RANKS[stats.rank].title}`;
   document.getElementById('next-rank-label').textContent = stats.rank < RANKS.length - 1
     ? `Próximo: ${RANKS[nextRank].emoji} ${RANKS[nextRank].title}`
-    : '🎉 Rank Máximo!';
+    : '🎉 Nível Máximo!';
   document.getElementById('xp-numbers').textContent = `${stats.xp} / ${xpForNext} XP`;
   document.getElementById('xp-bar-fill').style.width = `${Math.min(xpProgress, 100)}%`;
+
+  // Weekly Habits
+  renderHabits();
 
   // Roadmap Tabs
   document.getElementById('roadmap-tabs').innerHTML = `
     <div class="roadmap-tab ${currentRoadmap === 'international' ? 'active' : ''}" onclick="switchRoadmap('international')">
-      🌍 Roadmap Internacional
+      📚 Formação Técnica
     </div>
     <div class="roadmap-tab ${currentRoadmap === 'consultoria' ? 'active' : ''}" onclick="switchRoadmap('consultoria')">
       🇧🇷 Consultoria BH
@@ -425,7 +517,7 @@ function renderCalendar() {
               const td = findTaskData(tid);
               if (!td) return '';
               const done = !!state.completed[tid];
-              let src = '🌍';
+              let src = '📚';
               if (td.source === 'consultoria') src = '🇧🇷';
               if (td.source === 'vendas') src = '🗣️';
               return `<div class="task-item ${done ? 'completed' : ''}" id="task-${tid}">
